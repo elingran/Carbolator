@@ -1,0 +1,80 @@
+.profile-grid {
+    margin: auto;
+    display: grid;
+    justify-items:center;
+    color: white;
+    grid-row-gap: 20px;
+}
+
+.profile-header {
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    cursor: pointer;
+}
+
+
+/* ––––––––––––––– Modal ––––––––––––––– */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 24, 39, 0.7);
+    transition: opacity 600ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 200px auto;
+    padding: 10px;
+    background: rgb(81, 151, 216);
+    border-radius: 30px;
+    width: 50%;
+    min-width: 300px;
+    position: relative;
+    transition: all 700ms ease-in-out;
+}
+
+.input-edit{
+    background-color: #e0ffe9;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 12px 14px;
+    display: inline-block;
+    font-size: 12.5px;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    transition: all 200ms;
+    font-size: 35px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.popup .close:hover {
+    color: #2fbd5a;
+}
+
+/* –––––––––– Responsiveness –––––––––– */
+
+@media screen and (max-width: 600px){
+    .popup {
+        width: 70%;
+    }
+}

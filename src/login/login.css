@@ -1,0 +1,62 @@
+.login-register-grid {
+    display: grid;
+    grid-row-gap: 0px;
+    justify-items: center;
+}
+
+#login-logo {
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+
+.paragraph {
+    margin: 0;
+    text-align:center;
+    color: white;
+}
+
+.paragraph-disclaimer {
+    margin: 0;
+    text-align:center;
+    color: rgb(235, 208, 55);
+    font-weight: bolder;
+    text-shadow: 1px 1px 10px rgb(120, 167, 158);
+    margin: 20px;
+}
+
+#link-button {
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(129, 215, 255);
+    border: none;
+    font-size: 16px;
+    text-decoration: underline;
+    text-align: center;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+#link-button:hover {
+    color: rgb(123, 204, 241);
+}
+ 
+#primary-button-login {
+    background-color: #36d165;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    width: 15%;
+    margin-top: 20px;
+}
+#primary-button-login:hover {
+    background-color: #2fbd5a;
+}

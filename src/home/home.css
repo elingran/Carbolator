@@ -1,0 +1,28 @@
+#home-logo {
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#home-logo-text {
+  text-align: center;
+  font-size: 3.5vh;
+  color: white;
+}
+
+#start-carbolating-button {
+  background-color: #36d165;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+#start-carbolating-button:hover {
+  background-color: #2fbd5a;
+}

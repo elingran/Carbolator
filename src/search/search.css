@@ -1,0 +1,421 @@
+/* –––––––––––––– SearchView ––––––––––––––– */
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* –– Info on hover over info icon –– */
+
+.info-about-carbolator{
+    padding-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    z-index: 10;
+    color: black;
+}
+  
+.info-about-carbolator .infotext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 0px 20px rgba(0, 0, 0, 0.7);;  
+
+    position: absolute;
+    right: 20px;
+    bottom: 55px;
+    
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+  
+.info-about-carbolator:hover .infotext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.search-table{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.search-table div{
+    margin-right: 10px;
+}
+
+.search-input {
+    width: 100%;
+}
+
+.inputs {
+    width: 25%;
+}
+
+
+.container h1 {
+    margin: 100px 0px 50px 0px;
+    color: white;
+}
+
+.search-bar-grid {
+    width: 80%;
+    padding: 30px 30px;
+    background-color: white;
+    display: grid;
+    justify-items:center;
+
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 23px -3px rgba(0,0,0,0.9); 
+    box-shadow: 0px 0px 23px -3px rgba(0,0,0,0.9);
+    font-size: 12px;
+    color: rgb(99, 99, 99);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.infoText {
+    margin-left: 4px;
+}
+
+input[type=text] {
+    border-color: transparent;
+    font-size: 15px;
+    font-family: Poppins, sans-serif;
+    z-index: 0;
+
+}
+
+::placeholder { 
+    color: black;
+    opacity: 1; 
+  }
+
+input[type=datetime-local] {
+    border-color: transparent;
+    font-size: 15px;
+    font-family: Poppins, sans-serif;
+}
+
+input[type=text]:focus {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.checkboxSpan {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+/* –– Search button –– */
+#search-button {
+    background-color: #36d165;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#search-button:disabled {
+    background-color: #8ed1a2;
+    color: white;
+    cursor: not-allowed;
+}
+#search-button:hover {
+    background-color: #2fbd5a;
+}
+#search-button:hover:disabled {
+    background-color: #8ed1a2;
+}
+
+
+/* –––––––––––––– Search results ––––––––––––––– */
+.result-background {
+    opacity: 1;
+    background-color: white;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    box-shadow: inset 0 7px 9px -3px rgba(0,0,0,0.5);
+    transform: translateY(0%);
+    transition-timing-function: ease-out;
+    transition: 1s;   
+}
+
+.results-container {
+    width: 1000;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px 30px 0px;
+}
+
+.tofrom {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    justify-content: center;
+    width: 80%;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.tofrom div {
+    justify-self: center;
+}
+
+.search-results-grid {
+    width: 800px;
+    padding-bottom: 50px;
+}
+
+.headlines {
+    display: grid;
+    grid-template-columns: 22.5% 22.5% 22.5% 22.5% 5%;
+    font-weight: bolder;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.headlines div {
+    text-align: center;
+}
+
+.result-row {
+    display: grid;
+    grid-template-columns: 22.5% 22.5% 22.5% 22.5% 5%;
+    margin: 15px 0px;
+    border-radius: 10px;
+}
+
+#row_0 {
+    background-color: rgb(117, 212, 130);
+}
+
+#row_1 {
+    background-color: rgb(162, 218, 169);
+}
+
+#row_2 {
+    background-color: rgb(204, 231, 208);
+}
+
+#row_3 {
+    background-color: rgb(235, 235, 235);
+}
+
+.result-row div {
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+.result-row :first-child {
+    text-transform: capitalize;
+}
+.result-row :last-child {
+    padding: 0px;
+    padding-right: 10px;
+}
+
+#icon {
+    width: 12%;
+}
+
+.star-click {
+    width: 32px;
+    cursor: pointer;
+}
+
+/* –– Star tooltip –– */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 110px;
+    background-color: rgba(170, 170, 170, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s;
+    top: 0%;
+    left: 105%;
+    margin-left: 5px;
+}
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    margin-left: -5px;
+    margin-top: 5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent rgba(170, 170, 170, 0.8) transparent transparent;
+    right: 100%;
+
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* –––––––––––––– Responsive ––––––––––––––– */
+
+@media screen and (max-width: 1010px) {
+    
+    .search-bar-grid {
+        width: 450px;
+
+    }
+
+    .search-table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+    }
+    
+    .inputs {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .search-table button {
+        top: 100px;
+    }
+
+
+    .search-table div {
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .checkboxes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-results-grid {
+        width: 450px;
+        padding-bottom: 20px;
+    }
+
+    .tofrom {
+        display: block;
+        margin-top: auto;
+        margin-left: auto;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .star-click {
+        width: 28px;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    .search-bar-grid {
+        width: 230px;
+
+    }
+
+    .search-table {
+        font-size: 12px;
+    }
+
+    .container h1 {
+        margin: 20px 0px 20px 0px;
+        color: white;
+    }
+    .header {
+        font-size: 13px;
+    }
+
+    .tofrom {
+        font-size: 15px;
+    }
+
+    .search-results-grid {
+        width: 270px;
+        padding-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .headlines {
+        font-size: 10px;
+        overflow-wrap: break-word;
+    }
+
+    .checkboxes {
+        font-size: 12px;
+    }
+
+    .star-click {
+        width: 20px;
+    }
+
+    .tooltip .tooltiptext::after {
+        margin-top:0px;
+    }
+
+    .info-about-carbolator {
+        right: 10px;
+
+    }
+    .info-about-carbolator img {
+        height: 30px;  
+    }
+}
